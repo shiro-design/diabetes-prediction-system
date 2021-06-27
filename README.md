@@ -1,8 +1,8 @@
-# diabetes-prediction-system
-# Language : Python
-# Web Frame : Django
-# Library: Anaconda 
-How to setup :</br>
+# Diabetes-prediction-system using Logistic Regression 
+## Language : Python
+## Web Frame : Django
+## Library: Anaconda, ML 
+### How to setup :</br>
 You need to install Anaconda  , Python, Pycharm , Django to run this application.</br>
 Requirements: Installed anaconda and pandas, ML related libraries.</br>
 

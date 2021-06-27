@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
+    <meta charset="UTF-8">
+    <title>Trang Chuan Doan</title>
+    <style>
+        html {
+  height:100%;
+}
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+#btn{
+        width: 120px;
+        height: 30px;
+        }
+        .glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.main{
+position:fixed;
+top: 140px;
+left:610px;
+width: 550px;
+background-color:#ffffff;
+border-radius:10px;
+align-items:center;
+padding: 5%;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+h1 {
+  font-family:monospace;
+  margin-left: 850px;
+}
+p{
+font-size:25px;
+font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+    </style>
+</head>
+<body>
+  <h1>Hãy bắt đầu nào !</h1>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
+<div align="center" class="main">
+    <p>Hãy điền vào các ô sau nào !</p>
+    <form action="result">
+        <table>
+            <tr>
+                <td align="right">Mang thai</td>
+                <td align="left"><input type="text" name="n1"></td>
+            </tr>
+            <tr>
+                <td align="right">Lượng Glucose</td>
+                <td align="left"><input type="text" name="n2"></td>
+            </tr>
+             <tr>
+                <td align="right">Huyết áp</td>
+                <td align="left"><input type="text" name="n3"></td>
+            </tr>
+             <tr>
+                <td align="right">Độ dày da (mm)</td>
+                <td align="left"><input type="text" name="n4"></td>
+            </tr>
+             <tr>
+                <td align="right">Lượng Insulin</td>
+                <td align="left"><input type="text" name="n5"></td>
+            </tr>
+             <tr>
+                <td align="right">Chỉ số BMI</td>
+                <td align="left"><input type="float" name="n6"></td>
+            </tr>
+             <tr>
+                <td align="right">DiabetesPedigreeFunction</td>
+                <td align="left"><input type="float" name="n7"></td>
+            </tr>
+             <tr>
+                <td align="right">Age</td>
+                <td align="left"><input type="text" name="n8"></td>
+            </tr>
+
+
+        </table>
+         <button type="submit" id="btn" class="glow-on-hover">Xác nhận</button>
+    </form>
+    Result:{{result}}
+
+
+
+</div>
+
+</body>
+</html>

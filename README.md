@@ -3,8 +3,8 @@
 ## Web Frame : Django
 ## Library: Anaconda, ML 
 ### How to setup :</br>
-You need to install Anaconda  , Python, Pycharm , Django to run this application.</br>
-Requirements: Installed anaconda and pandas, ML related libraries.</br>
+Requirements You need to install Anaconda  , Python, Pycharm , Django to run this application.</br>
+-Installed anaconda and pandas, ML related libraries.</br>
 
 Open the project with Pycharm.</br>
 
